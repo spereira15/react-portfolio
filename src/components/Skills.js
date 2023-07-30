@@ -22,7 +22,7 @@ const Skills = () => {
         <div className="row">
           {Object.entries(skillsData).map(([category, technologies], index) => (
             <div key={index} className="col-md-6 col-lg-3 mb-4">
-              <div className="card border-0 bg-transparent h-100">
+              <div className="card border-0 bg-transparent custom-card">
                 <div className="card-body text-white rounded h-100">
                   <h3 className="card-title">{category}</h3>
                   <ul className="list-unstyled">

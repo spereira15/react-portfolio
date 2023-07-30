@@ -29,7 +29,7 @@ const Home = () => {
               <span className="animated-letter">n</span>
             </h2>
             <p className="lead">
-              I am a Full-Stack Developer passionate about creating amazing web
+              I'm a Full-Stack Developer passionate about creating amazing web
               applications.
             </p>
             <div className="social-links">

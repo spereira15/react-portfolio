@@ -14,6 +14,7 @@ body {
   padding: 0;
   color: var(--text-unhovered);
   background-color: var(--app-background);
+  font-family: "Roboto", sans-serif; /* Use the "Roboto" font for the entire page */
 }
 
 body,
@@ -34,15 +35,25 @@ html {
 
 .content-container {
   position: relative;
-  z-index: 1;
-}
-
-.App {
-  position: relative;
-  z-index: 1;
 }
 
 /* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.8),
+    rgba(26, 26, 26, 0.6) 50%,
+    rgba(26, 26, 26, 0.4) 80%,
+    rgba(26, 26, 26, 0) 100%
+  );
+}
+
+
 .nav-link:hover {
   animation: colorChange 0.3s ease forwards;
 }
@@ -64,7 +75,7 @@ html {
 
 h2 {
   font-size: 4rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* Use the "Roboto" font for headings */
   font-weight: 900;
   cursor: pointer;
 }
@@ -129,13 +140,18 @@ h2 {
   background-color: var(--background); 
 }
 
-.card {
+.custom-card {
   border: 1px solid var(--border-color); 
   background-color: var(--card-body-background); 
-  transition: transform 0.3s ease, background-color 0.3s ease; 
+  transition: background-color 0.3s ease; 
   width: 100%;
   max-width: 300px; 
   margin: auto;
+  height: 310px; 
+}
+
+.card-a {
+  text-decoration: none;
 }
 
 .card:hover {
@@ -188,12 +204,20 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+#skills .card-body ul li {
+  font-size: 1.3rem;
+}
+
+#contact .card-body ul li {
+  font-size: 1.2rem;
+}
+
 .card-body:not(:hover) {
   animation: cardColorChange 0.8s ease forwards, floatDown 0.8s both;
 }
 
 .card-body:hover {
-  animation: cardColorChangeExit 0.8s ease forwards, floatDown 0.8s both;
+  animation: cardColorChangeExit 0.8s ease forwards, floatUp 0.8s both;
 }
 
 @keyframes cardColorChange {
