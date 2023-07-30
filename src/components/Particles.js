@@ -5,7 +5,7 @@ const ParticlesComponent = () => {
     const particlesJSConfig = {
       particles: {
         number: {
-          value: 80,
+          value: 100,
           density: {
             enable: true,
             value_area: 800,
@@ -15,7 +15,7 @@ const ParticlesComponent = () => {
           value: "#826e9c",
         },
         shape: {
-          type: "circle",
+          type: "",
           stroke: {
             width: 0,
             color: "#000000",
@@ -58,7 +58,7 @@ const ParticlesComponent = () => {
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 0.8,
           direction: "none",
           random: false,
           straight: false,
@@ -99,7 +99,7 @@ const ParticlesComponent = () => {
             speed: 3,
           },
           repulse: {
-            distance: 100,
+            distance: 70,
             duration: 0.4,
           },
           push: {
