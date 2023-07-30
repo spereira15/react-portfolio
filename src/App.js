@@ -1,18 +1,25 @@
-import React from 'react';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import './App.css';
+// src/App.js
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import ParticlesComponent from "./components/Particles";
+import "./App.css";
 
 const App = () => {
   return (
-    <div className="App">
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+    <>
+      <ParticlesComponent />
+      <div className="content-container">
+        <Navbar />
+        <Home />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+    </>
   );
 };
 
