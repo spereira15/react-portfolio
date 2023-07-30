@@ -1,5 +1,3 @@
-/* App.css */
-
 :root {
   /* Color Variables */
   --app-background: #1a1a1a;         /* Main background color */
@@ -37,13 +35,11 @@ html {
 .content-container {
   position: relative;
   z-index: 1;
-  /* Add any other styling you want for your app's content */
 }
 
 .App {
   position: relative;
   z-index: 1;
-  /* Add any other styling you want for your app's content */
 }
 
 /* Navbar */
@@ -91,7 +87,7 @@ h2 {
     color: var(--text-unhovered);
   }
   to {
-    color: var(--hover-color); /* Color on hover */
+    color: var(--hover-color); 
   }
 }
 
@@ -100,7 +96,7 @@ h2 {
     color: var(--hover-color);
   }
   to {
-    color: var(--text-unhovered); /* Color on hover */
+    color: var(--text-unhovered);
   }
 }
 
@@ -129,64 +125,61 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--text-unhovered); /* Unhovered text color for the skills section */
-  background-color: var(--background); /* Main background color */
+  color: var(--text-unhovered); 
+  background-color: var(--background); 
 }
 
 .card {
-  border: 1px solid var(--border-color); /* Border color */
-  background-color: var(--card-body-background); /* Initial background color for cards */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for hover effect */
+  border: 1px solid var(--border-color); 
+  background-color: var(--card-body-background); 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
   width: 100%;
-  max-width: 300px; /* Limit the maximum width of the card */
+  max-width: 300px; 
   margin: auto;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Slightly larger size on hover */
+  transform: scale(1.05); 
 }
 
 .card-title {
-  font-size: 1.5rem; /* Font size for card title */
+  font-size: 1.5rem; 
   font-weight: bold;
-  color: var(--card-title-color); /* Card title color */
-  position: absolute; /* Position the title absolutely within the card container */
-  top: 50%; /* Move the title 50% from the top of the card container */
-  left: 50%; /* Move the title 50% from the left of the card container */
-  transform: translate(-50%, -50%); /* Center the title horizontally and vertically */
-  transition: opacity 0.3s ease; /* Transition for title opacity on hover and unhover */
-  pointer-events: none; /* Ignore mouse events on the title so the card body can be hovered */
-  opacity: 1; /* Show the title by default */
+  color: var(--card-title-color); 
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  transition: opacity 0.3s ease; 
+  pointer-events: none; 
+  opacity: 1; 
 }
 
-/* Hide the title when the card is hovered */
 .card:hover .card-title {
   opacity: 0;
 }
 
 .card-body {
   padding: 1rem;
-  background-color: var(--card-body-background); /* Card body background color */
-  color: var(--card-body-text); /* Card body text color */
-  transform-origin: center; /* Set transform origin for scaling effect */
-  transition: color 0.3s ease, transform 0.3s ease; /* Transition for cardColorChange and hover effect */
+  background-color: var(--card-body-background);
+  color: var(--card-body-text);
+  transform-origin: center;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hide the list when the card is not hovered */
 .card-body ul {
   list-style: none;
   padding-left: 0;
-  display: flex; /* Use flexbox to center the list items */
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Set the height to 100% to make sure the list items fill the card body */
-  margin: 0; /* Remove any margin for the list items */
-  opacity: 0; /* Hide the ul by default */
-  transition: opacity 0.3s ease; /* Transition for ul opacity on hover and unhover */
+  height: 100%; 
+  margin: 0; 
+  opacity: 0; 
+  transition: opacity 0.3s ease;
 }
 
-/* Show the list when the card is hovered */
 .card:hover ul {
   opacity: 1;
 }
@@ -203,27 +196,25 @@ h2 {
   animation: cardColorChangeExit 0.8s ease forwards, floatDown 0.8s both;
 }
 
-/* Animation for card body color change on hover */
 @keyframes cardColorChange {
   from {
-    color: var(--text-unhovered); /* Initial color on hover */
-    background-color: var(--card-body-background); /* Initial background color on hover */
+    color: var(--text-unhovered);
+    background-color: var(--card-body-background);
   }
   to {
-    color: var(--hover-color); /* Color on hover */
-    background-color: #514561; /* Background color on hover */
+    color: var(--hover-color);
+    background-color: #514561;
   }
 }
 
-/* Animation for card body color change on unhover */
 @keyframes cardColorChangeExit {
   from {
-    color: var(--hover-color); /* Initial color on unhover */
-    background-color: #514561; /* Initial background color on unhover */
+    color: var(--hover-color);
+    background-color: #514561;
   }
   to {
-    color: var(--text-unhovered); /* Original color on unhover */
-    background-color: var(--card-body-background); /* Original background color on unhover */
+    color: var(--text-unhovered); 
+    background-color: var(--card-body-background); 
   }
 }
 
@@ -233,8 +224,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--text-unhovered); /* Unhovered text color for the projects section */
-  background-color: var(--background); /* Main background color */
+  color: var(--text-unhovered); 
+  background-color: var(--background);
 }
 
 #contact {
@@ -243,6 +234,6 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--text-unhovered); /* Unhovered text color for the contact section */
-  background-color: var(--background); /* Main background color */
+  color: var(--text-unhovered);
+  background-color: var(--background); 
 }

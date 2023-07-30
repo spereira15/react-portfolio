@@ -44,21 +44,21 @@ const ParticlesComponent = () => {
           random: true,
           anim: {
             enable: false,
-            speed: 5, // Adjust the speed here (lower value means faster particles)
+            speed: 5,
             size_min: 0.1,
             sync: false,
           },
         },
         line_linked: {
           enable: true,
-          distance: 150, // Adjust the distance here (lower value means closer lines)
+          distance: 150,
           color: "#826e9c",
           opacity: 0.4,
-          width: 1, // Adjust the width of the lines here (lower value means thinner lines)
+          width: 1,
         },
         move: {
           enable: true,
-          speed: 2, // Adjust the speed here (higher value means faster movement)
+          speed: 2,
           direction: "none",
           random: false,
           straight: false,
@@ -72,21 +72,21 @@ const ParticlesComponent = () => {
         },
       },
       interactivity: {
-        detect_on: "canvas",
+        detect_on: "window",
         events: {
           onhover: {
             enable: true,
-            mode: "grab", // Change to "grab" to enable mouse interaction
+            mode: "repulse",
           },
           onclick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           resize: true,
         },
         modes: {
           grab: {
-            distance: 200,
+            distance: 50,
             line_linked: {
               opacity: 0.8,
             },
@@ -99,11 +99,11 @@ const ParticlesComponent = () => {
             speed: 3,
           },
           repulse: {
-            distance: 400,
+            distance: 100,
             duration: 0.4,
           },
           push: {
-            particles_nb: 4,
+            particles_nb: 20,
           },
           remove: {
             particles_nb: 2,
@@ -113,7 +113,6 @@ const ParticlesComponent = () => {
       retina_detect: true,
     };
 
-    // Initialize particles.js with the configuration
     window.particlesJS("particles-js", particlesJSConfig);
   }, []);
 
