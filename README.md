@@ -13,7 +13,6 @@ This application is a simple portfolio built on React, by Simon Pereira.
 ## Table of Contents
 
 - [Live](#live)
-- [Contributing](#contributing)
 - [Questions](#questions)
 
 ## Live
